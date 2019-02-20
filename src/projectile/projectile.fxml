@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.validation.DoubleValidator?>
+<?import eu.hansolo.medusa.Clock?>
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="635.0" prefWidth="1193.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectile.projectileController">
+   <children>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <SplitPane orientation="VERTICAL" prefHeight="641.0" prefWidth="895.0" VBox.vgrow="ALWAYS">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="1043.0">
+               <children>
+                  <JFXTabPane prefHeight="369.0" prefWidth="370.0" tabDragPolicy="REORDER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Horizontal">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.6503362151777138" layoutX="43.0" layoutY="48.0" pickOnBounds="false" prefHeight="239.0" prefWidth="256.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane prefHeight="421.0" prefWidth="635.0" style="-fx-background-color: black;">
+                                             <children>
+                                                <Canvas height="542.0" layoutX="297.0" layoutY="34.0" width="675.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0" />
+                                                <JFXButton layoutX="480.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #4de013;" text="Start" textFill="WHITE" AnchorPane.bottomAnchor="0.0" />
+                                                <JFXButton layoutX="546.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #dd482e;" text="stop" textFill="WHITE" AnchorPane.bottomAnchor="0.0" />
+                                                <JFXButton layoutX="611.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #ffed4c;" text="reset" textFill="#595757" AnchorPane.bottomAnchor="0.0" />
+                                                <Clock foregroundPaint="#cd4949" layoutX="543.0" layoutY="-15.0" nightMode="true" prefHeight="58.0" prefWidth="130.0" secondsVisible="true" sectionsVisible="true" skinType="LCD" />
+                                                <Label layoutX="4.0" layoutY="551.0" prefHeight="17.0" prefWidth="114.0" text="Animation Speed:" textFill="#fffdfd" />
+                                                <Slider layoutX="102.0" layoutY="554.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <JFXToggleButton layoutX="218.0" layoutY="-2.0" prefHeight="58.0" prefWidth="143.0" text="Theory" />
+                                                <AnchorPane fx:id="controle" layoutY="43.0" prefHeight="526.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+                                                   <children>
+                                                      <JFXComboBox layoutX="28.0" layoutY="396.0" prefHeight="25.0" prefWidth="189.0" promptText="objectMass" />
+                                                      <Label layoutX="14.0" layoutY="369.0" prefHeight="25.0" prefWidth="60.0" text="Mass" />
+                                                      <Label layoutX="231.0" layoutY="14.0" prefHeight="25.0" prefWidth="52.0" text="See" />
+                                                      <JFXComboBox layoutX="28.0" layoutY="463.0" prefHeight="25.0" prefWidth="189.0" promptText="objectMass" />
+                                                      <Label layoutX="14.0" layoutY="436.0" prefHeight="25.0" prefWidth="60.0" text="Planet" />
+                                                      <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="414.0" prefHeight="25.0" prefWidth="82.0" text="Calculator" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="437.0" prefHeight="25.0" prefWidth="82.0" text="Problems" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="462.0" prefHeight="25.0" prefWidth="82.0" text="Video" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="485.0" prefHeight="25.0" prefWidth="82.0" text="Quit" />
+                                                      <Separator layoutX="225.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="530.0" prefWidth="0.0" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="43.0" text="Time" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="66.0" text="Gravity" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="89.0" text="Speed" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="111.0" text="Mass" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="132.0" text="Gravity" />
+                                                      <JFXCheckBox layoutX="255.0" layoutY="153.0" text="Range" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <Gauge angleRange="360.0" layoutX="15.0" layoutY="54.0" ledVisible="true" maxValue="90.0" minMeasuredValue="0.0" prefHeight="141.0" prefWidth="200.0" skinType="QUARTER" />
+                                                <Gauge alert="true" angleRange="360.0" layoutX="11.0" layoutY="242.0" ledOn="true" ledVisible="true" prefHeight="141.0" prefWidth="200.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" shadowsEnabled="true" skinType="HORIZONTAL" smoothing="true" threshold="60.0" thresholdVisible="true" tickLabelDecimals="1" tickMarkSectionsVisible="true" title="SpeedoMeter" unit="m/s" value="67.0" />
+                                                <JFXSlider layoutX="25.0" layoutY="208.0" max="90.0" prefHeight="14.0" prefWidth="182.0" />
+                                                <JFXSlider layoutX="18.0" layoutY="383.0" prefHeight="14.0" prefWidth="189.0" />
+                                                <Label layoutX="25.0" layoutY="54.0" prefHeight="25.0" prefWidth="68.0" text="Angle" />
+                                                <Label layoutX="18.0" layoutY="230.0" prefHeight="25.0" prefWidth="80.0" text="Initial Speed" />
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Insane Sports">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.6503362151777138" layoutX="43.0" layoutY="48.0" pickOnBounds="false" prefHeight="239.0" prefWidth="256.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <AnchorPane prefHeight="421.0" prefWidth="635.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Canvas fx:id="insaneCanvas" height="542.0" layoutX="-32.0" layoutY="43.0" width="771.0" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                <JFXButton layoutX="580.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #4de013;" text="Start" textFill="WHITE" AnchorPane.bottomAnchor="1.0" />
+                                                <JFXButton layoutX="646.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #dd482e;" text="stop" textFill="WHITE" AnchorPane.bottomAnchor="1.0" />
+                                                <JFXButton layoutX="711.0" layoutY="544.0" prefHeight="25.0" prefWidth="63.0" ripplerFill="#270fc5" style="-fx-background-color: #ffed4c;" text="reset" textFill="#595757" AnchorPane.bottomAnchor="1.0" />
+                                                <Clock foregroundPaint="#cd4949" layoutX="642.0" layoutY="-15.0" nightMode="true" prefHeight="58.0" prefWidth="130.0" secondsVisible="true" sectionsVisible="true" skinType="LCD" />
+                                                <Label layoutX="4.0" layoutY="551.0" prefHeight="17.0" prefWidth="114.0" text="Animation Speed:" />
+                                                <Slider layoutX="102.0" layoutY="554.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <JFXToggleButton layoutX="218.0" layoutY="-2.0" prefHeight="58.0" prefWidth="143.0" text="Theory" />
+                                                <AnchorPane fx:id="controle1" layoutY="43.0" prefHeight="526.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+                                                   <children>
+                                                      <JFXComboBox layoutX="28.0" layoutY="396.0" prefHeight="25.0" prefWidth="189.0" promptText="objectMass" />
+                                                      <Label layoutX="14.0" layoutY="369.0" prefHeight="25.0" prefWidth="60.0" text="Mass" />
+                                                      <Label layoutX="244.0" layoutY="222.0" prefHeight="25.0" prefWidth="52.0" text="See" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="257.0" text="Time" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="301.0" text="Speed" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="280.0" text="Gravity" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="323.0" text="Mass" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="344.0" text="Gravity" />
+                                                      <JFXComboBox layoutX="28.0" layoutY="463.0" prefHeight="25.0" prefWidth="189.0" promptText="Planet" />
+                                                      <Label layoutX="14.0" layoutY="436.0" prefHeight="25.0" prefWidth="60.0" text="Planet" />
+                                                      <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="414.0" prefHeight="25.0" prefWidth="82.0" text="Calculator" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="437.0" prefHeight="25.0" prefWidth="82.0" text="Problems" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="462.0" prefHeight="25.0" prefWidth="82.0" text="Video" />
+                                                      <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="485.0" prefHeight="25.0" prefWidth="82.0" text="Quit" />
+                                                      <Label layoutX="166.0" layoutY="192.0" prefHeight="25.0" prefWidth="80.0" text="Initial Speed" />
+                                                      <JFXCheckBox layoutX="276.0" layoutY="365.0" text="Range" />
+                                                      <Label layoutX="130.0" layoutY="193.0" prefHeight="25.0" prefWidth="27.0" text="or" />
+                                                      <DoubleValidator layoutX="107.0" layoutY="115.0" />
+                                                      <Label layoutX="16.0" layoutY="243.0" text="Range" />
+                                                      <JFXSlider layoutX="35.0" layoutY="276.0" prefHeight="14.0" prefWidth="163.0" />
+                                                      <Label layoutX="14.0" layoutY="144.0" text="Acceleration" />
+                                                      <JFXSlider layoutX="119.0" layoutY="146.0" max="5.0" min="1.0" prefHeight="14.0" prefWidth="120.0" />
+                                                      <JFXComboBox layoutX="31.0" layoutY="332.0" prefHeight="25.0" prefWidth="189.0" promptText="Vehicle" />
+                                                      <Label layoutX="17.0" layoutY="305.0" prefHeight="25.0" prefWidth="60.0" text="Vehicle" />
+                                                      <JFXSlider fx:id="rampLength" layoutX="117.0" layoutY="85.0" max="300.0" min="50.0" prefHeight="14.0" prefWidth="120.0" />
+                                                      <Label layoutX="17.0" layoutY="83.0" prefHeight="17.0" prefWidth="72.0" text="Ramp length" />
+                                                      <Separator layoutX="-2.0" layoutY="213.0" prefHeight="12.0" prefWidth="415.0" />
+                                                      <Separator layoutX="234.0" layoutY="218.0" orientation="VERTICAL" prefHeight="308.0" prefWidth="8.0" />
+                                                      <JFXSlider layoutX="114.0" layoutY="24.0" max="85.0" min="5.0" prefHeight="14.0" prefWidth="120.0" />
+                                                      <JFXSlider layoutX="272.0" layoutY="198.0" max="85.0" min="5.0" prefHeight="14.0" prefWidth="120.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <Label layoutX="17.0" layoutY="61.0" prefHeight="25.0" prefWidth="108.0" text="Elivation angle" />
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>

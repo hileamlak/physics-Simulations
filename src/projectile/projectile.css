@@ -1,0 +1,29 @@
+
+.menu-bar{
+	-fx-background-color:#0b2b6c;
+}
+
+.tab{/*
+	-fx-background-color:#0c5aba;
+	-fx-text-base-color:#0ce1de;
+	-fx-font-size:12;
+	-fx-font-family:"Bradley Hand ITC";*/
+	
+}
+/* .tab : hover{
+	
+	
+}*/
+
+.menu{
+	/*-fx-background-color:#0c5aba;*/
+}
+.menu .label{
+	-fx-text-fill:#0ce1de;
+	-fx-font-size:14;
+	-fx-font-family:"Bradley Hand ITC";
+}
+
+
+
+
